@@ -205,9 +205,13 @@ class Moment {
   int get weekday => _dateTime.weekday;
 
   /// TODO: The day of the year
-  // int get dayOfYear {
-  //   return 0;
-  // }
+   int get dayOfYear {
+     return int.parse(DateFormat("D").format(_dateTime));
+   }
+  
+  int get weekOfYear {
+    return ((dayOfYear - date.weekday + 10) / 7).floor()
+  }
 
   /// The hour of the day
   int get hour => _dateTime.hour;
