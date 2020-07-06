@@ -210,7 +210,7 @@ class Moment {
    }
   
   int get weekOfYear {
-    return ((dayOfYear - date.weekday + 10) / 7).floor()
+    return ((dayOfYear - _dateTime.weekday + 10) / 7).floor();
   }
 
   /// The hour of the day
